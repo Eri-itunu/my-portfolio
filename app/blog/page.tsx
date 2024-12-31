@@ -16,7 +16,7 @@ export default async function Blog() {
     try {
         // Fetch data from Contentful
         const response = await client.getEntries<ContentfulBlogPost>({ content_type: "blogPost" });
-        // @ts-ignore
+       
         posts = response.items;
     
     } catch (error) {

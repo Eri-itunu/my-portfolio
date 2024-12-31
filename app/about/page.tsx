@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import profilePic from '../../public/profile.jpg'
+import profilePic from '../../public/profile.jpg';
 
 export default function Page() {
     return (
@@ -20,11 +20,11 @@ export default function Page() {
                     {/* Text Section */}
                     <div className="w-full md:w-3/4 flex flex-col gap-8 text-lg">
                         <p>
-                            Hi, I'm Eriitunu Adesioye, a passionate full-stack software engineer with a strong focus on the frontend. I thrive on building intuitive, user-centric products that make a real impact. My goal is to create tools and experiences that people genuinely love to use.
+                            Hi, I&apos;m Eriitunu Adesioye, a passionate full-stack software engineer with a strong focus on the frontend. I thrive on building intuitive, user-centric products that make a real impact. My goal is to create tools and experiences that people genuinely love to use.
                         </p>
 
                         <p>
-                            Currently, I'm diving deeper into React Native to enhance my skills in mobile development and expanding my expertise in SEO and DevOps. With a knack for combining technical depth and leadership, I aim to bridge gaps between development and user needs seamlessly.
+                            Currently, I&apos;m diving deeper into React Native to enhance my skills in mobile development and expanding my expertise in SEO and DevOps. With a knack for combining technical depth and leadership, I aim to bridge gaps between development and user needs seamlessly.
                         </p>
 
                         <h3 className="text-xl font-semibold">My Tech Stack</h3>
@@ -41,11 +41,11 @@ export default function Page() {
                         </ul>
 
                         <p>
-                            Outside of coding, I'm a huge fan of the NFL and enjoy playing pool. Like many techies, I’m also an anime enthusiast who loves diving into compelling stories and epic battles.
+                            Outside of coding, I&apos;m a huge fan of the NFL and enjoy playing pool. Like many techies, I’m also an anime enthusiast who loves diving into compelling stories and epic battles.
                         </p>
 
                         <p>
-                            Currently, I work as a frontend developer, and I'm continuously evolving my craft to stay ahead in this dynamic industry.
+                            Currently, I work as a frontend developer, and I&apos;m continuously evolving my craft to stay ahead in this dynamic industry.
                         </p>
                     </div>
                 </div>
