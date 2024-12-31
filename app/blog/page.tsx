@@ -1,6 +1,9 @@
 import { createClient } from 'contentful';
 import type { ContentfulBlogPost } from '@/types';
+import BlogCard from '@/components/BlogCard';
 
+
+  
 export default async function Blog() {
     const client = createClient({
         accessToken: process.env.CONTENTFUL_API_KEY, // Server-side environment variable
@@ -15,7 +18,7 @@ export default async function Blog() {
         const response = await client.getEntries<ContentfulBlogPost>({ content_type: "blogPost" });
         // @ts-ignore
         posts = response.items;
-        console.dir(posts);
+    
     } catch (error) {
         console.error("Error fetching data from Contentful:", error);
     }
@@ -24,10 +27,16 @@ export default async function Blog() {
         <div className='w-full flex flex-col justify-center items-center' >
             <h1 className='text-2xl font-semibold'>My Blog </h1>
             <p>A collection of my thoughts</p>
+            <div className='flex justify-center w-full mt-20 border-t border-white p-4' >
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+                    {posts.map((post) => (
+                        <BlogCard  key ={post.sys.id} post = {post} />
+                    ))}
+                   
+                </div>
+            </div>
             <ul>
-                {posts.map((post) => (
-                    <li key={post.sys.id}>{post.fields.title}</li>
-                ))}
+                
             </ul>
         </div>
     );

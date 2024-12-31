@@ -39,7 +39,16 @@ export type ContentfulBlogPost = {
       slug: string;
       readingTime: number;
       blogContent: BlogContentNode[];
+      tags: string[]
     };
+  };
+
+  export type singleField = {
+    title: string;
+    slug: string;
+    readingTime: number;
+    blogContent: BlogContentNode[];
+    tags: string[]
   };
   
   export type BlogContentNode = {

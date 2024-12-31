@@ -1,0 +1,41 @@
+/* Typewriter animation styles */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typewriter {
+  display: inline-block;
+  font-size: 2rem; /* Adjust as needed */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  animation: typing 3s steps(17) , blink 0.5s step-end infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0; /* Hidden by default */
+  animation: fadeInUp 1s ease-out forwards; /* Adjust duration as needed */
+}
+
