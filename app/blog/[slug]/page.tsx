@@ -1,6 +1,7 @@
 import { createClient } from 'contentful';
 import type { ContentfulBlogPost } from '@/types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 type BlogPageProps = {
   params: {
     slug: string;
@@ -13,7 +14,7 @@ const client = createClient({
 });
 
 // Generate static paths
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const response = await client.getEntries<ContentfulBlogPost>({ content_type: 'blogPost' });
 
   return response.items.map((item) => ({
@@ -28,25 +29,22 @@ export default async function Page({ params }: BlogPageProps) {
   });
 
   const blogPost = items[0];
-  const {title, blogContent } = blogPost.fields
 
   if (!blogPost) {
     return <h1>Blog Post Not Found</h1>;
   }
 
+  const { title, blogContent } = blogPost.fields;
+
   return (
-    <div className='w-full flex flex-col justify-center items-center' >
-        <h1 className='text-2xl font-semibold'>{title} </h1>
-    
-        <div className='border-t border-white container mx-auto flex justify-center items-center'>
-            <div className='px-12 flex mt-10 flex-col '>
-              {documentToReactComponents(blogContent)}
-            </div>
+    <div className="w-full flex flex-col justify-center items-center">
+      <h1 className="text-2xl font-semibold">{title}</h1>
+
+      <div className="border-t border-white container mx-auto flex justify-center items-center">
+        <div className="px-12 flex mt-10 flex-col">
+          {documentToReactComponents(blogContent)}
         </div>
-        <ul>
-            
-        </ul>
+      </div>
     </div>
-    
   );
 }
