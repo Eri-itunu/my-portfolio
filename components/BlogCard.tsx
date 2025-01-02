@@ -10,7 +10,7 @@ export default function BlogCard({ post }: BlogCardProps) {
     const {title, slug, tags, readingTime} = post.fields
     
   return (
-    <div className='border border-dashed border-white  rounded-lg' >
+    <Link href={'/blog/' + slug} className='border border-dashed border-white  rounded-lg' >
       <div className=" hover:rotate-2 focus:rotate-2 border border-white flex flex-col gap-2 rounded-lg p-3">
         <p className='text-xl font-semibold' >{title}</p>
         <p >{readingTime} minute</p>
@@ -21,8 +21,8 @@ export default function BlogCard({ post }: BlogCardProps) {
             ))}
         </span>
 
-        <Link href={'/blog/' + slug} >Read more</Link>
+        {/* <Link href={'/blog/' + slug} >Read more</Link> */}
       </div>
-    </div>
+    </Link>
   );
 }

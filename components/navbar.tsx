@@ -50,20 +50,22 @@ export default function Navbar() {
                 </Link>
 
                 <Link
+                    href="/about"
+                    className={`text-white ${router === '/about' ? 'text-blue-500' : ''}`}
+                >
+                    About
+                </Link>
+
+                <div className="h-[20px] border-l border-white"></div>
+
+                <Link
                     href="/blog"
                     className={`text-white ${router === '/blog' ? 'text-blue-500' : ''}`}
                 >
                     Blog
                 </Link>
 
-                <div className="h-[20px] border-l border-white"></div>
-
-                <Link
-                    href="/about"
-                    className={`text-white ${router === '/about' ? 'text-blue-500' : ''}`}
-                >
-                    About
-                </Link>
+               
             </div>
         </div>
     );
