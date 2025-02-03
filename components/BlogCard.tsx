@@ -7,7 +7,7 @@ type BlogCardProps = {
 
 export default function BlogCard({ post }: BlogCardProps) {
 
-    const {title, slug, tags, readingTime} = post.fields
+    const {title, slug, readingTime} = post.fields
     
   return (
     <Link href={'/blog/' + slug} className='w-full ' >
