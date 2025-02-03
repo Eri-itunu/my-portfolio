@@ -62,11 +62,11 @@ export default function Home() {
             initial={{ x: "100%", opacity: 0 }}
              animate={{ x: 0, opacity: 1 }}
              transition={{ duration: 1 }}
-             className="text-white flex flex-col gap-2 w-full items-end justify-end "
+             className="text-white flex flex-col gap-2 w-full items-end justify start md:justify-end "
           > 
             <div className="flex items-center">
-              <p>A software engineer with 3 years of experience</p>
-              <h1 className="font-normal leading-none text-[25vh]  text-right w-full pr-4">
+              <p className="hidden md:block" >A software engineer with 3 years of experience</p>
+              <h1 className="font-normal leading-none text-[8vh] md:text-[25vh]  text-right w-full pr-4">
                 Eriitunu
               </h1>
             </div>
@@ -80,15 +80,16 @@ export default function Home() {
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="text-white font-normal leading-none text-[25vh] text-left w-full pl-4"
+            className="text-white font-normal leading-none text-[8vh] md:text-[25vh] text-left w-full pl-4"
           >
             Adesioye
           </motion.h1>
+          <p className="block w-full px-4 md:hidden" >A software engineer with 3 years of experience</p>
 
       </div>
 
       {/* Projects Cards */}
-      <div ref={container} className="mt-[50px] md:mt-20  mb-[300px] w-full flex flex-col justify-center  items-center min-h-screen">
+      <div ref={container} className="mt-0  md:mt-20  mb-[50px] md:mb-[300px] w-full flex flex-col justify-center  items-center min-h-screen">
         {projects.map((project, index) => {
           const targetScale = 1 - ((projects.length - index) * 0.05);
           return (
@@ -112,12 +113,12 @@ export default function Home() {
        
         {experience.map( (exp, index) =>{
           return(
-            <div key={index} className="w-[80%] px-12 border-b flex py-6 justify-between" >
-              <h1 className="font-semibold text-3xl">
+            <div key={index} className="w-[80%] px-12 border-b flex py-6 flex-col text-center md:flex-row justify-center md:justify-between" >
+              <h1 className="font-semibold text-xl md:text-3xl">
                 {exp.title}
               </h1>
 
-              <span className="text-right flex flex-col gap-2" >
+              <span className="text-center md:text-right flex flex-col gap-2" >
                 <h1 className="text-2xl" >{exp.company}</h1>
                 <h2> {exp.start} - {exp.end} </h2>
               </span>

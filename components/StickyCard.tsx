@@ -24,7 +24,7 @@ export default function StickyCard({ data, index, range, targetScale, progress }
 
   const scale = useTransform(progress, range, [1,targetScale])
   return (
-    <div className='w-full   sticky justify-center pt-[100px] h-screen top-0 flex gap-11 flex-col items-center' >
+    <div className='w-full   sticky justify-center pt-[10px] md:pt-[100px] h-screen top-0 flex gap-11 flex-col items-center' >
      <h1 className='mb-12 text-3xl text-left ' > {index === 0 ? 'Projects' : ''}</h1>
         <motion.div
           style={{
