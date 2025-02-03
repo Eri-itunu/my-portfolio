@@ -56,7 +56,7 @@ export default function Home() {
       </div>
 
       {/* Animate name */}
-      <div className="flex flex-col justify-center  items-start h-[60vh] md:h-screen  ">
+      <div className="flex flex-col justify-center md:items-center items-start h-[50vh] md:h-[80vh]  ">
         
 
           <motion.div
@@ -65,9 +65,9 @@ export default function Home() {
              transition={{ duration: 1 }}
              className="text-white flex flex-col gap-2 w-full items-end justify-start md:justify-end "
           > 
-            <div className="flex items-center">
-              <p className="hidden md:block" >A software engineer with 3 years of experience</p>
-              <h1 className="font-normal leading-none text-[8vh] md:text-[25vh]  text-right w-full pr-4">
+            <div className="flex items-end">
+              <p className="hidden text-[20px] md:block" >A software engineer with 3 years of experience</p>
+              <h1 className="font-extrabold leading-none text-[8vh] md:text-[25vh]  text-right w-full pr-2 md:pr-12">
                 Eriitunu
               </h1>
             </div>
@@ -81,16 +81,16 @@ export default function Home() {
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="text-white font-normal leading-none text-[8vh] md:text-[25vh] text-left w-full pl-4"
+            className="text-white font-extrabold leading-none text-[8vh] md:text-[25vh] text-left w-full pl-2 md:pl-12"
           >
             Adesioye
           </motion.h1>
-          <p className="block w-full px-4 md:hidden" >A software engineer with 3 years of experience</p>
+          <p className="block text-sm w-full px-2 md:hidden" >A software engineer with 3 years of experience</p>
 
       </div>
 
       {/* Projects Cards */}
-      <div ref={container} className="mt-0  md:mt-20  mb-[50px] md:mb-[300px] w-full flex flex-col justify-center  items-center min-h-screen">
+      <div ref={container} className="mt-0  md:mt-210  mb-[50px] md:mb-[300px] w-full flex flex-col justify-center  items-center min-h-screen">
         {projects.map((project, index) => {
           const targetScale = 1 - ((projects.length - index) * 0.05);
           return (
@@ -108,20 +108,20 @@ export default function Home() {
 
       {/* Tech stack */}
       <div className="w-full  flex items-center flex-col gap-5  " >
-        <div className=" w-[80%] mb-8 text-left flex justify-start" >
-          <h1 className="text-left text-4xl">Experience</h1>
+        <div className=" w-[80%] mb-8 text-center md:text-left flex justify-center md:justify-start" >
+          <h1 className="text-center md:text-left text-4xl">Experience</h1>
         </div>
        
         {experience.map( (exp, index) =>{
           return(
-            <div key={index} className="w-[80%] px-12 border-b flex py-6 flex-col text-center md:flex-row justify-center md:justify-between" >
+            <div key={index} className="w-[80%]  border-b flex py-6 flex-col text-center md:flex-row justify-center md:justify-between" >
               <h1 className="font-semibold text-xl md:text-3xl">
                 {exp.title}
               </h1>
 
               <span className="text-center md:text-right flex flex-col gap-2" >
                 <h1 className="text-2xl" >{exp.company}</h1>
-                <h2> {exp.start} - {exp.end} </h2>
+                <h2 className="opacity-30" > {exp.start} - {exp.end} </h2>
               </span>
             </div>
           )
@@ -129,7 +129,7 @@ export default function Home() {
       </div>
 
       {/* Blog posts */}
-      <div className="w-full mt-20 flex items-center flex-col gap-5  text-left" >
+      <div className="w-full mt-[150px] flex items-center flex-col gap-5  text-left" >
       <div className=" w-[80%] mb-8 text-left flex justify-start" >
           <h1 className="text-left text-4xl">Blog</h1>
         </div>

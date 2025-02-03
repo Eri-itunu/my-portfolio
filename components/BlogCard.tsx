@@ -14,7 +14,7 @@ export default function BlogCard({ post }: BlogCardProps) {
       <div className=" w-full flex flex-col md:flex-row text-center justify-between">
         <div>
           <p className='text-xl font-semibold' >{title}</p>
-          <p >{readingTime} minute(s) </p>
+   
         </div>
 {/* 
         <span className='flex gap-2' >
