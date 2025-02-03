@@ -4,7 +4,6 @@ import { motion, useScroll } from "motion/react";
 import {projects} from "@/app/data/projects";
 import { experience } from "../data/experience";
 import StickyCard from "@/components/StickyCard";
-import BlogList from "@/components/BlogList";
 import { useRef } from "react";
 import { useEffect, useState } from "react";
 import type { ContentfulBlogPost } from "@/types";

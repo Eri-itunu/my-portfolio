@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { motion, useScroll, useTransform, MotionValue } from 'motion/react';
+import { motion, useTransform, MotionValue } from 'motion/react';
 type projectData = {
     title: string;
     link: string;
