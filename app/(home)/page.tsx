@@ -8,6 +8,7 @@ import { useRef } from "react";
 import { useEffect, useState } from "react";
 import type { ContentfulBlogPost } from "@/types";
 import BlogCard from "@/components/BlogCard";
+import { Twitter,Linkedin, Instagram } from 'lucide-react';
 
 export default function Home() {
 
@@ -39,13 +40,13 @@ export default function Home() {
     <div className="">
 
       {/* Navbar */}
-      <div className="flex w-full md:px-10 mt-8 justify-between" >
+      <div className="flex w-full px-2 items-center md:px-10 mt-8 justify-between" >
         <h1 className="text-xl font-bold" >
-          E.A
+          E.A.
         </h1>
 
         <div>
-          <ul className="flex gap-4">
+          <ul className=" hidden md:flex gap-4">
             <li>About</li>
             <li>Blog</li>
             <li>Projects</li>
@@ -55,14 +56,14 @@ export default function Home() {
       </div>
 
       {/* Animate name */}
-      <div className="flex flex-col justify-center  items-center h-screen  ">
+      <div className="flex flex-col justify-center  items-start h-[60vh] md:h-screen  ">
         
 
           <motion.div
             initial={{ x: "100%", opacity: 0 }}
              animate={{ x: 0, opacity: 1 }}
              transition={{ duration: 1 }}
-             className="text-white flex flex-col gap-2 w-full items-end justify start md:justify-end "
+             className="text-white flex flex-col gap-2 w-full items-end justify-start md:justify-end "
           > 
             <div className="flex items-center">
               <p className="hidden md:block" >A software engineer with 3 years of experience</p>
@@ -150,16 +151,16 @@ export default function Home() {
 
       <div className="w-full flex items-center justify-center mt-[100px] mb-[100px] " >
         <div className="w-[80%] " >
-            <div className="flex justify-between border-b py-8" > 
-              <h3 className="font-bold text-2xl" >E.A</h3>
-              <div>
-
+            <div className="flex justify-between border-b py-2" > 
+              <h3 className="font-bold text-2xl" >E.A.</h3>
+              <div className="flex gap-2 items-center ">
+                <Twitter />
+                <Linkedin/>
+                <Instagram/>
               </div>
             </div>
 
-            <div>
-              <h2>Inspo from framer</h2>
-            </div>
+           
         </div>
 
       </div>
