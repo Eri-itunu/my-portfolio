@@ -33,11 +33,12 @@ export default function StickyCard({ data, index, range, targetScale, progress }
             scale,
             top: `calc(-10% + ${index * 25}px)`,
           }}
-          className="rounded-[25px] bg-white p-4 border relative top-[-1%] shadow-lg 
+          className="rounded-[25px] bg-gray-400 p-4 border flex flex-col items-center relative top-[-1%] shadow-lg 
                     w-[90%] sm:w-[80%] md:w-[700px] lg:w-[900px] 
                     h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px]"
         >
           <p className="text-black text-lg sm:text-xl md:text-2xl">{data.title}</p>
+          <p className="text-black text-lg sm:text-xl md:text-2xl">{data.description}</p>
         </motion.div>
 
     </div>

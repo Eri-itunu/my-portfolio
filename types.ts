@@ -38,10 +38,20 @@ export type ContentfulBlogPost = {
       title: string;
       slug: string;
       readingTime: number;
+      thumbnail:thumbnailProps;
       blogContent: BlogContentNode[];
       tags: string[]
     };
   };
+
+  type thumbnailProps = {
+    fields: {
+      file:{
+        url:string;
+      }
+    }
+    title: string;
+  }
 
   export type singleField = {
     title: string;

@@ -9,6 +9,7 @@ export async function GET() {
         });
 
         const response = await client.getEntries({ content_type: "blogPost" });
+        console.log(response.items)
 
         return NextResponse.json({ posts: response.items });
     } catch (error) {

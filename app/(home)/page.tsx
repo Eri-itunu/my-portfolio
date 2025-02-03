@@ -3,6 +3,7 @@
 import { motion, useScroll } from "motion/react";
 import {projects} from "@/app/data/projects";
 import { experience } from "../data/experience";
+import { stack } from "../data/stack";
 import StickyCard from "@/components/StickyCard";
 import { useRef } from "react";
 import { useEffect, useState } from "react";
@@ -89,6 +90,7 @@ export default function Home() {
 
       </div>
 
+
       {/* Projects Cards */}
       <div ref={container} className="mt-0  md:mt-210  mb-[50px] md:mb-[300px] w-full flex flex-col justify-center  items-center min-h-screen">
         {projects.map((project, index) => {
@@ -107,6 +109,27 @@ export default function Home() {
       </div>
 
       {/* Tech stack */}
+
+      <div className="w-full flex flex-col  my-4 md:my-12 items-center justify-center text-center md:text-left " >
+        <div className="w-[80%]" >
+          <h1 className="text-4xl">Tech Stack</h1>
+        </div>
+
+        <div className="flex gap-2 w-[80%] flex-wrap my-8" >
+          {stack.map((skill, index)=>{
+            return(
+              <div key={index} className=" rounded bg-[#8A2BE2] p-1" >
+                <p className="text-xl">{skill.language}</p>
+              </div>
+            )
+          })}
+
+          <p>+ more</p>
+
+        </div>
+      </div>
+
+      {/* Experience */}
       <div className="w-full  flex items-center flex-col gap-5  " >
         <div className=" w-[80%] mb-8 text-center md:text-left flex justify-center md:justify-start" >
           <h1 className="text-center md:text-left text-4xl">Experience</h1>
